@@ -1,9 +1,11 @@
+body{
+    max-width: 100vw;
+    overflow-x: none;
+}
 html{
     --sw: 30%;
     --gap: 20px;
-    --sh: calc(20% - 1.2 * var(--gap));/*20%*/
-
-    
+    --sh: calc(20% - 1.2 * var(--gap));
 }
 .wrapper{
     display: flex;
@@ -26,6 +28,7 @@ svg{
     position: absolute;
     top: 160px;
     z-index: -1;
+    max-width: 100vw;
 }
 
 main{
@@ -128,8 +131,9 @@ main > div:nth-child(6){
         width: 100%;
         margin-bottom: 10px;
     }
+
     svg{
-        margin-top: 7%;
+        margin-top: 65px;
     }
 
     main{
@@ -152,6 +156,9 @@ main > div:nth-child(6){
     main > div:nth-child(5) .a{
         font-size: 0.9rem;
     }
+    main > div:nth-child(6){
+        text-align: left;
+    }
 
     footer{
         flex-flow: row wrap;
@@ -170,7 +177,7 @@ main > div:nth-child(6){
         margin: 5px 10% 10px 10%;
     }
     svg{
-        margin-top: 12%;
+        margin-top: 95px;
     }
 }
 @media (max-width: 700px){
@@ -182,11 +189,13 @@ main > div:nth-child(6){
     }
 }
 @media (max-width: 650px){
-    svg{
-        height: 70%;
-    }
     main > div:nth-child(5) .a{
         font-size: 0.8rem;
+    }
+}
+@media (max-width: 618px){
+    svg{
+        margin-top: 120px;
     }
 }
 @media (max-width: 600px){
@@ -210,9 +219,6 @@ main > div:nth-child(6){
     }
 }
 @media (max-width: 550px){
-    svg{
-        margin-top: 16%;
-    }
     footer > div{
         width: 100%;
         text-align: left;
@@ -240,21 +246,50 @@ main > div:nth-child(6){
         justify-content: center;
     }
     svg{
-        margin-top: 23%;
+        margin-top: 200px;
+    }
+}
+@media (max-width: 409px){
+    svg{
+        margin-top: 220px;
+    }
+    main > div:nth-child(6) p{
+        font-size: 0.8rem;
     }
 }
 @media (max-width: 400px){
-    svg{
-        height: 120%;
-    }
     main > .a:nth-child(1) > .b,
     main > .a:nth-child(2) > .b{
         font-size: 0.75rem;
     }
     main > .a:nth-child(3) > .b{
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
     main > div:nth-child(5) .a{
         font-size: 0.7rem;
+    }
+}
+@media (max-width: 360px){
+    main > div:nth-child(5) .a{
+        font-size: 0.65rem;
+    }
+}
+@media (max-width: 350px){
+    svg{
+        margin-top: 220px;
+    }
+    main > div:nth-child(5) .a{
+        font-size: 0.6rem;
+    }
+    main > .a:nth-child(3) > .b{
+        font-size: 0.6rem;
+    }
+}
+@media (max-width: 310px){
+    svg{
+        margin-top: 245px;
+    }
+    main > div:nth-child(5) .a{
+        font-size: 0.55rem;
     }
 }
