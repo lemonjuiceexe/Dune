@@ -1,0 +1,260 @@
+html{
+    --sw: 30%;
+    --gap: 20px;
+    --sh: calc(20% - 1.2 * var(--gap));/*20%*/
+
+    
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.upper, footer{
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+nav li{
+    margin: 10px 5%;
+}
+
+svg{
+    position: absolute;
+    top: 160px;
+    z-index: -1;
+}
+
+main{
+    margin: 8% 0;
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    height: 800px;
+}
+main div{
+    border-radius: 10px;
+}
+main > div:nth-child(1),
+main > div:nth-child(2),
+main > div:nth-child(3){
+    height: var(--sh);
+    width: var(--sw);
+    margin-top: var(--gap);
+}
+main > div:nth-child(2){
+    margin: var(--gap) var(--gap);
+}
+main > div:nth-child(4){
+    height: calc(3 * var(--sh) + 2 * var(--gap));
+    width: var(--sw);
+    margin-right : var(--gap);
+}
+main > div:nth-child(5){
+    height: calc(3 * var(--sh) + 2 * var(--gap));
+    width: calc(2 * var(--sw) + var(--gap));
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+main > div:nth-child(5) > div{
+    width: 100%;
+    height: 33.3%;
+}
+main > div:nth-child(5) > div:nth-child(2){
+    margin: var(--gap) 0;
+}
+main > div:nth-child(6){
+    width: calc(3 * var(--sw) + 2 * var(--gap));
+    height: var(--sh);
+    margin: var(--gap) 0;
+}
+
+
+@media (max-width: 1200px){
+    main > .a:nth-child(3) > .b{
+        font-size: 0.85rem;
+    }
+    nav li{
+        margin: 10px 4%;
+    }
+}
+@media (max-width: 1050px){
+    main > .a:nth-child(1) > .b{
+        font-size: 0.85rem;
+    }
+}
+@media (max-width: 950px){
+    h1{
+        font-size: 1.45em;
+    }
+    h3{
+        font-size: 0.85em;
+    }
+    nav li{
+        margin: 10px 2.5%;
+    }
+    main > .a:nth-child(2) > .b{
+        font-size: 0.85rem;
+    }
+    main > .a:nth-child(3) > .b{
+        font-size: 0.8r em;
+    }
+    footer{
+        font-size: 0.83rem;
+    }
+}
+@media (max-width: 800px){
+    html{
+        --sw: 80%;
+        --gap: 0px;
+        --sh: calc(10% - 1.2 * 10px); 
+    }
+    .logo{
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    footer .logo{
+        margin-bottom: 20px;
+    }
+    header div{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    svg{
+        margin-top: 7%;
+    }
+
+    main{
+        height: 1000px;
+    }
+    main div.a{
+        margin: 0;
+    }
+    main > div:nth-child(5) > .a:nth-child(2){
+        margin: 20px 0;
+    }
+    main > div:nth-child(3){
+        background-position: 50% 65%;
+    }
+    main > .a:nth-child(1) > .b,
+    main > .a:nth-child(2) > .b,
+    main > .a:nth-child(3) > .b{
+        font-size: 0.9rem;
+    }
+    main > div:nth-child(5) .a{
+        font-size: 0.9rem;
+    }
+
+    footer{
+        flex-flow: row wrap;
+        font-size: 1rem;
+    }
+    footer div:nth-child(2){
+        text-align: right;
+    }
+}
+@media (max-width: 750px){
+    nav li{
+        margin: 10px 4.5% 5px 4.5%;
+    }
+    nav li:nth-child(4),
+    nav li:nth-child(5){
+        margin: 5px 10% 10px 10%;
+    }
+    svg{
+        margin-top: 12%;
+    }
+}
+@media (max-width: 700px){
+    main > div:nth-child(5) .a{
+        font-size: 0.85rem;
+    }
+    main > div.a:nth-child(6){
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 650px){
+    svg{
+        height: 70%;
+    }
+    main > div:nth-child(5) .a{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 600px){
+    main > div:nth-child(5) .a{
+        font-size: 0.75rem;
+    }
+    main > div.a:nth-child(6){
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 556px){
+    nav li:nth-child(3),
+    nav li:nth-child(4),
+    nav li:nth-child(5){
+        margin: 5px 7% 10px 7%;
+    }
+    main > .a:nth-child(1) > .b,
+    main > .a:nth-child(2) > .b,
+    main > .a:nth-child(3) > .b{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 550px){
+    svg{
+        margin-top: 16%;
+    }
+    footer > div{
+        width: 100%;
+        text-align: left;
+        margin: 7px 20px;
+    }
+    footer div:nth-child(2){
+        text-align: left;
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 480px){
+    main > .a:nth-child(3) > .b{
+        font-size: 0.75rem;
+    }
+}
+@media (max-width: 450px){
+    nav li:nth-child(1),
+    nav li:nth-child(2),
+    nav li:nth-child(3),
+    nav li:nth-child(4),
+    nav li:nth-child(5){
+        width: 100%;
+        margin: 5px 0;
+        display: flex;
+        justify-content: center;
+    }
+    svg{
+        margin-top: 23%;
+    }
+}
+@media (max-width: 400px){
+    svg{
+        height: 120%;
+    }
+    main > .a:nth-child(1) > .b,
+    main > .a:nth-child(2) > .b{
+        font-size: 0.75rem;
+    }
+    main > .a:nth-child(3) > .b{
+        font-size: 0.7rem;
+    }
+    main > div:nth-child(5) .a{
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+*{
+    color: white;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.1vw;
+    background: linear-gradient(180deg, rgba(233,203,142,1) 25%, rgba(165,86,58,1) 70%, rgba(102,40,12,1) 100%);
+    line-height: 1.2em;
+}
+::selection, ::-moz-selection {
+    background: #e9cb8e;
+    color: black;
+}
+h1, h3{
+    letter-spacing: 5px;
+}
+
+.upper{
+    background-color: #68aec9;
+}
+
+header{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    height: 100px;
+
+    border-radius: 4px;
+}
+header > *:nth-child(1){
+    margin: 10px;
+    margin-right: auto;
+}
+header > *:nth-child(2){
+    margin-right: auto;
+    text-align: center;
+}
+h1{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 5px 0;
+    line-height: 110%;
+}
+
+nav{
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+.ud{
+    display: inline-block;
+}
+.ud::after{
+    display: block;
+    position: relative;
+    content: "";
+    background-color: white;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 0;
+    transition: all ease-in-out 200ms;
+}
+.ud:hover::after{
+    width: 100%;
+}
+.mv{
+    transition: all 300ms ;
+}
+.mv:hover{
+    transform: translateX(7%);
+}
+
+main > div:not(main > div:nth-child(5)),
+main > div:nth-child(5) > div{
+    background-repeat: no-repeat;
+}
+main > div:nth-child(1){
+    
+    background-position: 50% 20%;
+    background-image: url("../img/d2.jpg");
+    /*background-size: 120%;*/background-size: cover;
+}
+main > div:nth-child(2){
+    background-image: url("../img/d5.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+}
+main > div:nth-child(3){
+    background-image: url("../img/d1.webp");
+    /*background-size: 100%;*/background-size: cover;
+    background-position: 50% 45%;
+}
+main > div:nth-child(4){
+    background-image: url("../img/d6.jpg");
+    /*background-size: 170%;*/background-size: cover;
+    background-position: center;
+}
+main > div:nth-child(5) > div:nth-child(1){
+    background-image: url("../img/d3.jpg");
+    /*background-size: 130%;*/background-size: cover;
+     background-position: 50% 80%;
+}
+main > div:nth-child(5) > div:nth-child(2){
+    background-image: url("../img/d8.jpg");
+    /*background-size: 100%;*/background-size: cover;
+    background-position: 50% 80%;
+}
+main > div:nth-child(5) > div:nth-child(3){
+    background-image: url("../img/d7.jpg");
+    /*background-size: 100%;*/background-size: cover;
+    background-position: 50% 40%;
+}
+main > div:nth-child(6){
+    background-image: url("../img/d4.jpg");
+    /*background-size: 100%;*/background-size: cover;
+    background-position: 50% 33%;
+
+    text-align: center;
+}
+
+/* main > div:not(main > div:nth-child(5)) > div,
+main > div:nth-child(5) > div > div*/
+.b
+{
+    background-color: rgba(1,1,1,0.6);
+    position: relative;
+    top: 0;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+
+    transition: all 0.4s ease;
+}
+/*main > div:not(main > div:nth-child(5)):hover main > div:not(main > div:nth-child(5)) > div,
+main > div:nth-child(5) > div:hover main > div:nth-child(5) > div > div*/
+.a:hover .b{
+    height: 100%;
+}
+.a:hover{
+    cursor: pointer;
+}
+.b > p{
+    padding: 6px;
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
+
+nav > a:hover::after{
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    line-height: 1.3rem;
+    
+    border-top: 2px solid white;
+}
+footer > *{
+    margin: 20px;
+}
